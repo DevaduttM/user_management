@@ -5,15 +5,15 @@ import Users from "./Users";
 
 const Landing = () => {
     const userdata = [
-        { id: 1, name: 'John Doe', email: 'johndoe@example.com', status: 'enrolled', date: '2025-03-17' },
-        { id: 2, name: 'Jane Smith', email: 'janesmith@example.com', status: 'registered', date: '2025-03-16' },
-        { id: 3, name: 'Alice Johnson', email: 'alicejohnson@example.com', status: 'enrolled', date: '2025-03-15' },
-        { id: 4, name: 'Bob Brown', email: 'bobbrown@example.com', status: 'registered', date: '2025-03-14' },
-        { id: 5, name: 'Charlie Davis', email: 'charliedavis@example.com', status: 'enrolled', date: '2025-03-13' },
-        { id: 6, name: 'David Wilson', email: 'davidwilson@example.com', status: 'registered', date: '2025-03-12' },
-        { id: 7, name: 'Ella Martinez', email: 'ellamartinez@example.com', status: 'enrolled', date: '2025-03-11' },
-        { id: 8, name: 'Frank White', email: 'frankwhite@example.com', status: 'registered', date: '2025-03-10' },
-        { id: 9, name: 'Grace Hall', email: 'gracehall@example.com', status: 'enrolled', date: '2025-03-09' },
+        { id: 1,  name: 'John Doe', email: 'johndoe@example.com', status: 'enrolled', date: '2025-03-17' },
+        { id: 2,  name: 'Jane Smith', email: 'janesmith@example.com', status: 'registered', date: '2025-03-16' },
+        { id: 3,  name: 'Alice Johnson', email: 'alicejohnson@example.com', status: 'enrolled', date: '2025-03-15' },
+        { id: 4,  name: 'Bob Brown', email: 'bobbrown@example.com', status: 'registered', date: '2025-03-14' },
+        { id: 5,  name: 'Charlie Davis', email: 'charliedavis@example.com', status: 'enrolled', date: '2025-03-13' },
+        { id: 6,  name: 'David Wilson', email: 'davidwilson@example.com', status: 'registered', date: '2025-03-12' },
+        { id: 7,  name: 'Ella Martinez', email: 'ellamartinez@example.com', status: 'enrolled', date: '2025-03-11' },
+        { id: 8,  name: 'Frank White', email: 'frankwhite@example.com', status: 'registered', date: '2025-03-10' },
+        { id: 9,  name: 'Grace Hall', email: 'gracehall@example.com', status: 'enrolled', date: '2025-03-09' },
         { id: 10, name: 'Henry Adams', email: 'henryadams@example.com', status: 'registered', date: '2025-03-08' },
         { id: 11, name: 'Isla Nelson', email: 'islanelson@example.com', status: 'enrolled', date: '2025-03-07' },
         { id: 12, name: 'Jack Moore', email: 'jackmoore@example.com', status: 'registered', date: '2025-03-06' },
@@ -47,10 +47,10 @@ const Landing = () => {
                     <h1 className="text-white text-2xl">User Data</h1>
                 </div>
                 <div className="ml-7 md:w-1/2 -[90%] h-3/4 flex justify-center items-center flex-wrap overflow-y-scroll">
-                    {userdata.map((user) => (
+                    {userdata.map((user, index) => (
                     <>
-                    <Users key={user.id} userdata={user} />
-                    <hr className="w-[95%] opacity-25 my-3" />
+                    <Users key={index} userdata={user} />
+                    <hr key = {index} className="w-[95%] opacity-25 my-3" />
                     </>
                     ))}
                 </div>

@@ -1,6 +1,14 @@
 import React from "react";
 
-const Users = ({ userdata }) => {
+interface User {
+    id: number
+    name: string
+    email: string
+    status: string
+    date: string // Assuming date is a string (e.g., "2025-03-17")
+  }
+  
+  const Users: React.FC<{ userdata: User }> = ({ userdata }) => {
   return (
     <>
       <div className="ml-8 w-full h-[3rem] flex items-center justify-around">
